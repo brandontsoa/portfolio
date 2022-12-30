@@ -413,3 +413,82 @@ footer#contact {
     font-size: 1rem;
   }
  }
+
+@keyframes reveal {
+	0% {
+		bottom: -70px;
+	}
+	100% {
+		bottom: 0px;
+	}
+}
+@keyframes fleche{
+  0%{
+    left: -70px;
+  }100%{
+    left: 30px;
+  }
+}
+@keyframes left{
+  0%{
+    left: -70px;
+  }
+  100%{
+    left: 0px;
+  }
+}
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@media screen and (min-width:1000px){
+  .anime{
+    display:none;
+  }
+  .header {
+    mix-blend-mode: difference; 
+  }
+  section#about,
+  section#services,
+  section#projets{
+    box-shadow: 0px 0px 10px #4705fc33;
+  }
+  .hidden{
+  opacity: 0;
+  transition: all 1.8s;
+  transform: translateX(+100%);
+  filter: blur(5px);
+}
+.show{
+  opacity: 1;
+  transition: all 1.8s;
+  transform: translateX(0);
+  filter: blur(0);
+}
+
+.hiddentop{
+  opacity: 0;
+  transition: all 2   s;
+  transform: translateY(+100%);
+  filter: blur(5px);
+}
+.show1{
+  opacity: 1;
+  transition: all 1.6s;
+  transform: translateY(0);
+  filter: blur(0);
+}
+.hiddentxt{
+  opacity: 0;
+  transition: all 2s;
+  filter: blur(0);
+}
+.showtxt{
+  opacity: 1;
+  transition: all 2s;
+}
+}
