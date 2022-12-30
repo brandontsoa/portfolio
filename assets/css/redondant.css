@@ -1,0 +1,415 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+:root{
+  --violetneon: #c32aff;
+  --violet2: #5924ed;
+  --bleu2base: #34b7a7;
+  --body-bg: #efebfa;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+html{
+    scroll-behavior:smooth ;
+      font-size: 16px;
+  }
+  body{
+    background-color: var(--body-bg) !important;
+    font-family: sans-serif;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background-color: black; */
+    width: 100%;
+    height: 100px;
+    color: white;
+    padding: 0 2rem;
+    font-weight: 700;
+    z-index: 10;
+}
+
+.reseaux{
+    list-style: none;
+    display: flex;
+    font-size: 2.5rem;
+    position: fixed;
+    right: 25px;
+    color: white;
+  }
+  .reseaux a{
+    text-decoration: none;
+    color: white;
+  }
+  .reseaux li{
+    padding-left: 50px;
+    
+  }
+  nav {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+  }
+  
+  .logo{
+      font-size: 2rem;
+  }
+  
+  .menu{
+    margin: 0 50PX;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      list-style: none;
+      width: 1000px;
+      font-size: 2rem;
+      text-transform: uppercase;
+
+      
+      
+  }
+  .menu li{
+    cursor: pointer;
+    background: linear-gradient(to left,black 50%,var(--body-bg) 50%) right;
+    background-size: auto;
+    background-size: 235%;
+  }
+  
+  .menu li:hover{ 
+    color: #000;
+    position: relative;
+    background-position: left;
+    transition: 0.3s ease-in-out;
+    border: 16PX solid black;
+    
+  }
+  
+  
+  .menu li a{
+      color: white;
+      text-decoration: none;
+  }
+  .menu li a:hover{
+    mix-blend-mode: difference;
+    text-decoration: none;
+  }
+  
+
+/* FOOOOOTTTER CONTACT ////////////////////////////*/
+footer#contact {
+    min-height: 100vh;
+    background: #000;
+    margin-top: 4%;
+    padding: 0 10% ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  footer#contact p:first-child {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10% 0;
+  }
+  
+  .link {
+    display: inline-block;
+    padding: .2rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    background: linear-gradient(to left,black 50%,white 50%) right;
+      background-size: auto;
+    color: #fff;
+    background-size: 235%;
+    transition: .5s ease;
+    mix-blend-mode: difference;
+  }
+  .link:hover{
+    background-position: left;
+    color: #000;
+    mix-blend-mode: difference;
+  }
+  
+  
+  
+  .copyright{
+    font-family: 'Roboto mono';
+    color: white;
+  }
+  .copyright a{
+    text-decoration: none;
+    color: var(--violetneon);
+  }
+  
+  
+  
+  /* FOOOOOTTTER CONTACT ////////////////////////////*/
+  
+@media screen and (min-width:1000px){
+    .anime{
+      display:none;
+    }
+    .header {
+      mix-blend-mode: difference; 
+    }
+    
+  }
+
+  @media only screen and (max-width: 1000px) {
+    /* Appareils avec une résolution de 1000 pixels ou moins */
+    header{
+        position: absolute;
+        bottom: 20px;
+        
+    }
+    header{
+      height:10vh;
+    }
+    
+    .black .text p {
+        font-size: 1.3rem;
+      } 
+  
+      .black .text p .bleu{
+        font-size: 1.3rem;
+      }
+      
+      .togglebg{
+          position: fixed;
+          z-index: 19;
+          bottom: 90px;
+          right: 60PX;
+          display: block;
+          font-size: 2rem;
+          cursor: pointer;
+          background-color:var(--violet2);
+          height: 60PX;
+          width: 60px;
+          border-radius: 50%;
+      }
+      
+      .logo{
+          position: relative;
+          z-index: 20;
+          color: #000;
+      }
+  
+      
+      .menu{
+        margin: 0;
+          position: fixed;
+          z-index: 19;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 60vh;
+          background:black;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 2rem; 
+          justify-content:space-around;
+          transform: translateX(100%);
+          transition: transform 0.7s;
+          font-size: 2rem;
+      }
+      
+      .menu li a{
+          font-size: 2rem;
+      }
+      .open .menu{
+      transform: translateX(0);
+      }
+      .open {
+        overflow: hidden;
+      }
+     
+  
+     #footer {
+      background: #e9e8e6;
+      padding: 30px 0;
+      color: #222222;
+      font-size: 14px;
+      text-align: center;
+    }
+    
+    #footer .credits {
+      padding-top: 5px;
+      font-size: 13px;
+    }
+    
+    #footer .credits a {
+      color: var(--violet2);
+    }
+  
+    /*anime button*/
+    
+    svg {
+      height: 80px;
+      position: fixed;
+      width: 80px;
+      bottom: 80px;
+      right: 50PX;
+      z-index:20;
+    }
+    .plates {
+      display: flex;
+      flex-wrap: wrap;
+      max-height: 160px;
+      width: 640px;
+    }
+    
+      .plates {
+        width: 320px;
+      }
+    
+    .plate {
+      height: 80px;
+      width: 80px;
+    }
+    .burger {
+      filter: url(#gooeyness);
+    }
+    .x {
+      transform: scale(0);
+      transition: transform 400ms;
+    }
+    .line {
+      fill: none;
+      stroke: white;
+      stroke-width: 6px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transform-origin: 50%;
+      transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+    }
+    .x .line {
+      stroke-width: 5.5px;
+    }
+    /* First plate */
+    .plate1 .line2 {
+      stroke-dasharray: 40 200;
+      stroke-dashoffset: 0px;
+    }
+    .plate1 .line3 {
+      stroke-dasharray: 40 179;
+      stroke-dashoffset: 0px;
+    }
+    .active .line {
+      transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, transform 500ms;
+    }
+    .active.plate1 .line1 {
+      transform: scale(0, 1);
+      transition: transform 500ms 100ms;
+    }
+    .active.plate1 .line2 {
+      stroke-dasharray: 5px 200;
+      stroke-dashoffset: -164px;
+    }
+    .active.plate1 .line3 {
+      stroke-dasharray: 5px 179;
+      stroke-dashoffset: -142px;
+    }
+    .active .x {
+      transform: scale(1);
+      transition: transform 400ms 350ms;
+    }
+    /* El segundo plato */
+    .plate2 .line1 {
+      stroke-dasharray: 21 185.62753295898438;
+      transition-delay: 0;
+    }
+    .plate2 .line2 {
+      stroke-dasharray: 21 178.6514129638672;
+      transition-delay: 30ms;
+    }
+    .plate2 .line3 {
+      stroke-dasharray: 21 197.92425537109375;
+      transition-delay: 60ms;
+    }
+    .plate2 .line4 {
+      stroke-dasharray: 21 190.6597137451172;
+      transition-delay: 90ms;
+    }
+    .plate2 .line5 {
+      stroke-dasharray: 21 208.52874755859375;
+      transition-delay: 120ms;
+    }
+    .plate2 .line6 {
+      stroke-dasharray: 21 186.59703063964844;
+      transition-delay: 150ms;
+    }
+    .active.plate2 .line1 {
+      stroke-dasharray: 5 185.62753295898438;
+      stroke-dashoffset: -141px;
+    }
+    .active.plate2 .line2 {
+      stroke-dasharray: 5 178.6514129638672;
+      stroke-dashoffset: -137px;
+    }
+    .active.plate2 .line3 {
+      stroke-dasharray: 5 197.92425537109375;
+      stroke-dashoffset: -176px;
+    }
+    .active.plate2 .line4 {
+      stroke-dasharray: 5 190.6597137451172;
+      stroke-dashoffset: -159px;
+    }
+    .active.plate2 .line5 {
+      stroke-dasharray: 5 208.52874755859375;
+      stroke-dashoffset: -139px;
+    }
+    .active.plate2 .line6 {
+      stroke-dasharray: 5 186.59703063964844;
+      stroke-dashoffset: -176px;
+    }
+    .active.plate2 .x {
+      transition: transform 400ms 250ms;
+    }
+    footer#contact {
+      min-height: 30vh;
+      padding-top: 1.5rem;
+      padding-right: 30vw;
+    }
+    
+    footer#contact p:first-child {
+    font-size: 1.3rem;
+    transition: all 0.3s ease-in-out;
+    }
+    .open footer#contact p {
+      
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  footer#contact p:nth-child(2) {
+    font-size: 1.4rem;
+  }
+  @media only screen and (max-width: 1000px) {
+    .open .reseaux{
+     position: fixed;
+     left: 150PX;
+     bottom: 40%;
+     transform: translateX(0);
+     transition: 0.7s all;
+     z-index: 40;
+ 
+   }
+   .reseaux{
+     position: fixed;
+     transform: translateX(100%);
+   }
+   footer#contact p:nth-child(2) {
+    font-size: 1rem;
+  }
+ }
