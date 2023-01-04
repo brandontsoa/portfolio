@@ -872,9 +872,12 @@ section#accueil article h3 {
   text-transform: uppercase;
   font-weight: 600;
 }
- section#accueil article ul li {
-  font-weight: 600;
+ section#accueil article ul li{
   margin: 2% 0;
+}
+section#accueil article ul li h2{
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 section#accueil picture {
   align-self: end;
