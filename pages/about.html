@@ -34,7 +34,7 @@
     font-weight: 300;
 }
 #top{
-  padding: 10rem 0;
+padding: 10rem 0 3rem 0;
   background-color: black;
   display: flex;
   justify-content: space-around;
@@ -133,6 +133,11 @@ section#comp h2.titre{
     right: 5PX;
     width: 50%;
   }
+  H2#jesuis{
+    font-size: 1.6rem;
+    min-width: 300px;
+    min-height: 50px;
+  }
 }
 @media screen and (max-width: 1000px){
   #TOP DIV H2{
@@ -159,6 +164,9 @@ section#comp h2.titre{
    width: 90%;
   }
   
+}
+          #changingword {
+  color:var(--violetneon);
 }
     </style>
   </head>
@@ -245,6 +253,7 @@ section#comp h2.titre{
   <div class="card">
     <div class="card-header">
         <img class="card-image"src="../assets/img/adobe-illustrator.png" alt="adobe Illustrator   ">
+              <h2 id="jesuis" style="text-align: center;">  Je suis<span id="changingword"> Brandon</span></h2>
     </div>
   <div class="card-content">
     <h2 class="class-title"> Adobe Illustrator</h2>
@@ -321,6 +330,23 @@ section#comp h2.titre{
     </footer>
   
     </body>
+<!-- jQuery Libraru -->
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2'></script>
+<script>(function(){
+  var words = [
+      ' curieux',
+      ' énergique',
+      ' sociable',
+      ' empathique',
+      ' Brandon',
+      ], i = 0;
+  setInterval(function(){
+      $('#changingword').fadeOut(function(){
+          $(this).html(words[i=(i+1)%words.length]).fadeIn();
+      });
+  }, 2000);
+    
+})();</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"
   ></script>
