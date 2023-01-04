@@ -23,6 +23,29 @@
     display: none;
   }
 }
+           @media screen and (min-width: 768px) {
+            .fa-chevron-down{
+           position: absolute;
+           bottom: 10%;
+           font-size: 3rem;
+           left: 50%; /* position the left edge of the element at the middle of the parent */
+          transform: translate(-50%, -50%);
+          }
+          }
+          .fa-chevron-down{
+           position: absolute;
+           bottom: 10%;
+           left: 50%; /* position the left edge of the element at the middle of the parent */
+          transform: translate(-50%, -50%);
+          }
+          .bounce2 {
+  animation: bounce2 2s ease infinite;
+              }
+              @keyframes bounce2 {
+                0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+                40% {transform: translateY(-30px);}
+                60% {transform: translateY(-15px);}
+              }
     </style>
   </head>
   <body>
@@ -145,6 +168,7 @@
     </section>
 -->
     </header><!-- End Header -->
+  <i class="fa fa-chevron-down bounce2" aria-hidden="true"></i>
     <div class="container-main">
       <div class="black">
         <div class="text hiddentxt">
