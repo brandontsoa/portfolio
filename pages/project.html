@@ -62,24 +62,13 @@ html{
 div#trait{
   position: absolute;
   border-left: 2px solid black;
-  height: 600vh;
+  height: 150vh;
   top: 0;
   left: 10vw;
   box-shadow: 0px 0px 10px #4705fc33;
   overflow-y: hidden;
 }
 
-#projects div#r1,
-#projects div#r3{
-  border-top: 2px solid black;
-border-right: 2px solid black;
-border-bottom: 2px solid black;
-}
-#projects div#r2  {
-  border-top: 2px solid black;
-border-left: 2px solid black;
-border-bottom: 2px solid black;
-}
 .buttons {
   margin-top: 3rem;
   display: flex;
@@ -104,125 +93,10 @@ border-bottom: 2px solid black;
   border-radius: 50px;
   text-decoration: none;
 }
- section#projects h2,
- #projects .item .right .project-title {
-  background-color: var(--body-bg);
-  margin-left: -3%;
-  margin-top: 2.5%;
-  padding: 1rem 0;
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size: clamp(1.75rem, 3vw, 2.1Rrem);
-  color: black;
-  font-size: 2.5rem;
-}
-/* Projects Section */
-#projects {
-	padding-bottom: 10rem;
-}
-#projects .item {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	max-width: 800px;
-	margin: 0 auto;
-	margin-bottom: 15rem;
-	/* gap: 2rem; */
-}
-#projects .item:nth-of-type(even) {
-	flex-direction: row-reverse;
-}
 
-#projects .item .left {
-	flex: 1;
-}
-#projects .item .right {
-	margin-left: -150px;
-	flex: 1;
-	background-color: var(--body-bg);
-	padding: 5rem 3rem;
-	border-radius: 12px;
-	box-shadow: 0px 0px 20px #00000028;
-	z-index: 2;
-}
 
-#projects .item:nth-of-type(even) .right {
-	margin-left: 0;
-}
-#projects .item:nth-of-type(even) .left {
-	margin-left: -150px;
-}
-#projects .item .left .img {
-	min-height: 200px;
-  width: auto;
-  min-width: 700px;
-	border-radius: 12px;
-	overflow: hidden;
-	box-shadow: 0px 0px 20px #4705fc33;
-	position: relative;
-}
-#projects .item .left .img::after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
 
-}
-#projects .item .left .img img {
-  width: 100%;
-  height: auto;
-  min-width:100% ;
-	transition: 0.3s ease transform;
-}
-#projects .item:hover .left .img img {
-	transform: scale(1.1);
-	z-index: 1;
-}
 
-#projects .item .right .project-sub-title {
-	font-size: 1.6rem;
-	margin-bottom: 2rem;
-}
-#projects .item .right .project-desc {
-	color: var(--secondary-gray);
-	margin-bottom: 3rem;
-  font-size: 1.2rem;
-}
-#projects .item .right .external-link {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 1rem;
-	padding: calc(0.6em - 4px) calc(1.6em - 4px);
-}
-#projects .item .right .external-link svg {
-	width: 25px;
-}
-@media only screen and (min-width: 1000px){
-  #first{
-  padding-right: 20%;
-}
-  #second {
-    padding-left: 20%;
-  }
-  .last{
-    padding-left: 15%;
-  }
-}
-
-@media only screen and (max-width: 768px){
-#projects div.right {
-  max-height: 80vh;
-}
-}
-@media screen and (min-width: 1000px) {
-  #projects .item .left .img {
-  padding: 5% 5%;
-}
-
-}
 
 @media only screen and (min-width: 768px) {
 
@@ -308,81 +182,17 @@ border-bottom: 2px solid black;
   animation: scrollTxtInverse 20s linear infinite;
 }
 
-  #projects .item .left .img {
-	min-height: 100%;
-  width: auto;
-  min-width: 100%;
-	border-radius: 12px;
-	overflow: hidden;
-	box-shadow: 0px 0px 20px #4705fc33;
-	position: relative;
-  z-index: 3;
-  margin-bottom: 20%;
-}
 .bandeau{
   padding-top: 200px;
   position: relative;
   left: 0;
 }
-
-
-  #projects .item .left .img {
-	min-height: 100%;
-  width: auto;
-  min-width: 100%;
-	border-radius: 12px;
-	overflow: hidden;
-	box-shadow: 0px 0px 20px #4705fc33;
-	position: relative;
-  z-index: 3;
-  margin-bottom: 20%;
-}
-
-  #projects div#r1,
-#projects div#r3{
-  border-top: 0;
-  border-left: 2px solid black;
-border-right: 2px solid black;
-border-bottom: 2px solid black;
-}
-#projects div#r2  {
-  border-top: 0;
-  border-right: 2px solid black;
-border-left: 2px solid black;
-border-bottom: 2px solid black;
-}
   div#trait{
     visibility:collapse;
   }
-	#projects .item {
-		flex-direction: column;
-	}
-	#projects .item .left {
-		width: 100%;
-	}
-	#projects .item .right {
-		margin-left: 0;
-		width: 90%;
-		margin-top: -150px;
-	}
-	#projects .item:nth-of-type(even) {
-		flex-direction: column;
-	}
-	#projects .item:nth-of-type(even) .left {
-		margin-left: 0;
-	}
 }
 
-@media only screen and (max-width: 450px) {
-  
-	#projects .item .right .buttons {
-		flex-direction: column;
-	}
-	#projects .item .right .buttons a {
-		width: 100%;
-		text-align: center;
-	}
-}
+
     </style>
   </head>
   <body>
@@ -448,7 +258,6 @@ border-bottom: 2px solid black;
         </nav>
   
       </header>
-      
 
   <!-- projects -->
 <div class="bandeau">
@@ -462,132 +271,350 @@ border-bottom: 2px solid black;
     <span class="txti t2">· MES PROJETS · LOGOS · MAQUETTES · SITES&nbsp;</span>  
   </div>
  </div>
-  <section id="projects">
-    <div class="container">
-      <div class="all-items">
-        <div class="item">
-          <div class="left">
-            <div class="img" id="first">
-              <img src="../assets/img/design.png" alt="maquette html css accueil de site">
-            </div>
+ <!-- projects -->
+<style>
+  @media screen and (max-width:1000px){
+  #pf{
+    text-align: center;
+ padding-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+
+  }
+  #pf a{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #pf img{
+    max-width: 80%;
+    height: auto;
+    border-radius: 13px;
+    border: 2px solid #4705fc33;
+    box-shadow: 4px 7px 0px #000042;
+    cursor: pointer;
+    margin: 10px;
+    transition: 400ms;
+    background-color: white;
+  }
+  #pf img:hover{
+    box-shadow: 0px 0px 10px #4705fc33;
+    transform: scale(1.03);
+  }
+  .overlay{
+    position:fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    transition: opacity .4s;
+    visibility: hidden;
+    opacity: 0;
+    margin-top: -10vh;
+  }
+  .overlay:target{
+    visibility: visible ;
+    opacity: 1;
+  }
+  .popup{
+    margin: 6rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 13px;
+    width: 80%;
+    max-width: 1200px;
+    height: auto;
+    position: relative;
+    transition: all .4s;
+  }
+  a.cross{
+    text-decoration: none;
+    font-size: 4rem;
+    position: absolute;
+    bottom: 0;
+    left: auto;
+ 
+    
+  }}
+  @media screen and (min-width:1000px){
+  #pf{
+  margin-left: 10vw;
+ padding-top: 100px;
+  margin-right: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  }
+  #pf img{
+    width: auto;
+    height: 250px;
+    border-radius: 13px;
+    border: 2px solid #4705fc33;
+    box-shadow: 4px 7px 0px #000042;
+    cursor: pointer;
+    margin: 10px;
+    transition: 400ms;
+    filter:grayscale(1);
+    background-color: white;
+  }
+  #pf img:hover{
+    box-shadow: 0px 0px 10px #4705fc33;
+    filter:grayscale(0);
+    transform: scale(1.03);
+  }
+  .overlay{
+    position:fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    transition: opacity .4s;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target{
+    visibility: visible ;
+    opacity: 1;
+  }
+  .popup{
+    margin: 6rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 13px;
+    width: 1000px;
+    max-width: 1200px;
+    height: 500px;
+    position: relative;
+    transition: all .4s;
+  }
+  a.cross{
+    text-decoration: none;
+    font-size: 8rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+  }
+}
+    </style>
+      <section id="pf">
+        <a href="#isis">
+          <img src="../assets/img/chartegraphique.png" alt="logo jardin d'isis">
+        </a>
+        <a href="#design">
+          <img src="../assets/img/design.png" alt="maquette html css accueil de site">
+        </a>
+        <a href="#offline">
+          <img src="../assets/img/offlinemag.png" alt="offline marque de streetwear">
+        </a>
+        <a href="#epcm">
+          <img src="../assets/img/portfolio-bacquetlaure.png" alt="Portfolio pour une chanteuse danseuse bacquet laure">
+        </a>
+        <a href="#perma">
+          <img src="../assets/img/PERMACULTURE.png" alt="projet de site de permaculture">
+        </a>
+          <a href="#teamo">
+          <img src="../assets/img/teamo.png" alt="teamo">
+        </a>
+        <a href="#aibroad">
+          <img src="../assets/img/AIBROAD_1@150x.png" alt="aibroad">
+        </a>
+      
+        
+      </section> 
+    
+      <style>
+        @media screen and (max-width:1000px){
+          .column>img{
+          width: auto;
+          max-width: 300px;
+          height: 80%;
+          box-shadow: 0px 20px 20px #4705fc33;
+          max-height: 300px;}
+          
+
+        
+        .project-title {
+            padding: 1rem 0;
+            text-transform: uppercase;
+            font-weight: 900;
+            color: black;
+            font-size: 2.5rem;
+          }
+          .project-sub-title {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+          }
+          .project-desc {
+          color: var(--secondary-gray);
+          margin-bottom: 3rem;
+          font-size: 1.2rem;
+          }}
+        @media screen and (min-width:1000px){
+          
+        .row{
+          display: flex;
+          height: fit-content
+          ;
+        }
+        .column{flex:50%; 
+        padding: 10px;      
+        }
+        .project-title{
+          background-color: var(--body-bg);
+          margin-left: -3%;
+          margin-top: 2.5%;
+          padding: 1rem 0;
+          text-transform: uppercase;
+          font-weight: 900;
+          text-align: center;
+          color: black;
+          font-size: 2.5rem;
+        }
+        .project-sub-title{
+          text-align: center;
+          font-size: 1.6rem;
+        margin-bottom: 2rem;
+        }
+        .project-desc {
+          color: var(--secondary-gray);
+          font-size: 1.2rem;
+        }
+        .column>img{
+          width: 400px;
+          height: auto;
+          box-shadow: 0px 20px 20px #4705fc33;
+          
+        }}
+
+      </style>
+      <section>
+      <div id="isis" class="overlay">
+        <div class="popup row">
+          <div class="column">
+
+            <img src="../assets/img/chartegraphique.png" alt="logo jardin d'isis">
           </div>
-          <div class="right" id="r1">
+          <div class="column">
+            <a href="#pf" class="cross">&times;</a>
+            <h2 class="project-title"> ébauche de logo</h2>
+            <h3 class="project-sub-title">Exercice d'imagination et de créativité</h3>
+            <p class="project-desc">Lors d'un devoir j'ai pu 
+              essayer d'imaginer la base 
+              d'un nouveau logo pour "Les jardins d'Isis" </p>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="design" class="overlay">
+        <div class="popup row">
+          <div class="column">
+
+            <img src="../assets/img/design.png" alt="maquette html css accueil de site">
+          </div>
+          <div class="column">
+            <a href="#pf" class="cross">&times;</a>
             <h2 class="project-title">Accueil de site</h2>
             <h3 class="project-sub-title">Maquette d'un site de design</h3>
-            <p class="project-desc">J'ai créé cette maquette en html css dans le but de m'entrainer à la maîtrise de ces derniers</p>
-            <div class="buttons">
-              <a href="#" class="primary-btn">Know More</a>
-              <a href="#" class="primary-btn outline external-link"> <span>Preview</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
-            </div>
-
+            <p class="project-desc">J'ai créé cette maquette en html css dans le 
+              but de m'entrainer à la maîtrise de ces derniers </p>
           </div>
+
         </div>
+      </div>
 
-        <div class="item">
-          <div class="left">
-            <div class="img" id="second isis">
-              <img src="../assets/img/chartegraphique.png" alt="logo jardin d'isis">
-            </div>
+      <div id="offline" class="overlay">
+        <div class="popup row">
+          <div class="column">
+
+            <img src="../assets/img/offlinemag.png" alt="offline marque geek fictive">
           </div>
-          <div class="right" id="r2">
-            <h2 class="project-title">Ebauche de logo</h2>
-            <h3 class="project-sub-title">Exercice d'imagination et de créativité.
-            </h3>
-            <p class="project-desc">Lors d'un devoir j'ai pu essayer d'imaginer la base d'un nouveau logo pour 
-              "Les jardins d'Isis" 
-            </p>
-            <div class="buttons">
-              <a href="#" class="primary-btn">Know More</a>
-              <a href="#" class="primary-btn outline external-link"> <span>Preview</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
-            </div>
+          <div class="column">
+            <a href="#pf" class="cross">&times;</a>
+  
+            <h3 class="project-sub-title">Logo et marque fictive.</h3>
+            <p class="project-desc">Travail sur la création d'une marque fictive et son logo : offline, 
+              une marque de streetwear pour une cible plutot jeune / geek.  </p>
           </div>
+
         </div>
-        
-        <div class="item">
-          <div class="left">
-            <div class="img" id="first">
-              <img src="../assets/img/PERMACULTURE.png" alt="projet de site de permaculture">
-            </div>
-          </div>
-          <div class="right" id="r1">
-            <h2 class="project-title">PERMACULT'<BR>HEURE</h2>
-            <h3 class="project-sub-title">Un site pour le introduire à la permaculture.
-            </h3>
-            <p class="project-desc">Site réalisé lors d'un projet universitaire.
-              Ce site, réalisé sur Wordpress, a pour but d'introduire la découverte du concept de permaculture
-              via différents évènements : stages, ateliers, classes vertes etc.
-            </p>
-            <div class="buttons">
-              <a href="#" class="primary-btn">Know More</a>
-              <a href="#" class="primary-btn outline external-link"> <span>Preview</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
+      </div>
 
+      <div id="epcm" class="overlay">
+        <div class="popup row">
+          <div class="column">
 
-        <div class="item">
-          <div class="left">
-            <div class="img" id="second ">
-              <img class="last" src="../assets/img/portfolio-bacquetlaure.png" alt="Portfolio pour une chanteuse danseuse">
-            </div>
+            <img src="../assets/img/portfolio-bacquetlaure.png" alt="Portfolio pour une chanteuse danseuse bacquet laure">
           </div>
-          <div class="right" id="r2" >
+          <div class="column">
+            <a href="#pf" class="cross">&times;</a>
             <h2 class="project-title">Maquette de portfolio</h2>
             <h3 class="project-sub-title">Une maquette pour une artiste.</h3>
-            <p class="project-desc"> C'est une maquette figma d'une page d'accueil pour un projet portfolio d'une élève de l'Ecole Professionelle de Comédie Musciale (EPCM), à Paris.
-            </p>
-            <div class="buttons">
-              <a href="#" class="primary-btn">Know More</a>
-              <a href="#" class="primary-btn outline external-link"> <span>Preview</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
-            </div>
+            <p class="project-desc">C'est une maquette figma d'une page d'accueil pour un projet portfolio d
+              'une élève de l'Ecole Professionelle de Comédie Musciale (EPCM), à Paris.
+ </p>
           </div>
-        </div>
 
-        <div class="item">
-          <div class="left">
-            <div class="img" id="first">
-              <img style="background-color: white;" class="last" src="../assets/img/offlinealllogo.png" alt="Portfolio pour une chanteuse danseuse">
-            </div>
-          </div>
-          <div class="right" id="r1" >
-            <h2 class="project-title">Imagination de logo</h2>
-            <h3 class="project-sub-title">Logo et marque fictive.</h3>
-            <p class="project-desc">Travail sur la création d'une marque fictive et son logo : offline, une marque de streetwear pour une cible plutot jeune / geek.</p>
-            <div class="buttons">
-              <a href="#" class="primary-btn">Know More</a>
-              <a href="#" class="primary-btn outline external-link"> <span>Preview</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
-            </div>
-          </div>
         </div>
-
       </div>
-    </div>
-  </section>
+
+      <div id="perma" class="overlay">
+        <div class="popup row">
+          <div class="column">
+
+            <img src="../assets/img/PERMACULTURE.png" alt="projet de site de permaculture">
+          </div>
+          <div class="column">
+            <a href="#pf" class="cross">&times;</a>
+            <h2 class="project-title">PERMACULT'
+              HEURE </h2>
+            <h3 class="project-sub-title">Un site pour d'introduction à la permaculture.</h3>
+            <p class="project-desc">Site réalisé lors d'un projet universitaire. Ce site, réalisé sur Wordpress, a pour but d'inicier à la permaculture.  </p>
+          </div>
+
+        </div>
+      </div>
+      <div id="teamo" class="overlay">
+        <div class="popup row">
+          <div class="column">
+
+            <img src="../assets/img/teamo.png" alt="projet de site de permaculture">
+          </div>
+          <div class="column">
+            <a href="#pf" class="cross">&times;</a>
+            <h2 class="project-title"> Marque de bubbletea</h2>
+            <h3 class="project-sub-title">Exercice de créativité</h3>
+            <p class="project-desc">création d'une marque fictive de bubbletea inspiré par une 
+              mascotte du jeu League of Legends "Teemo" ainsi qu'une page wordpress </p>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="aibroad" class="overlay">
+        <div class="popup row">
+          <div class="column">
+
+            <img src="../assets/img/AIBROAD.svg" alt="aibroad">
+          </div>
+          <div class="column">
+            <a href="#pf" class="cross">&times;</a>
+            <h2 class="project-title">Création de marque</h2>
+            <h3 class="project-sub-title">Exercice de créativité avec contraintes</h3>
+            <p class="project-desc">Réalisation d'une marque de voyage se servant d'algorithmes et d'IA
+              afin de satisfaire ses clients pour leurs voyage. Conception d'un brief créatif  </p>
+          </div>
+        </div>
+      </div>
+    </section>
+      
+        
+  
+
+ 
  <!-- ======= Footer ======= -->
 
  <footer id="contact">
