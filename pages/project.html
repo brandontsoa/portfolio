@@ -64,7 +64,7 @@ html{
 div#trait{
   position: absolute;
   border-left: 2px solid black;
-  height: 150vh;
+  min-height:250vh;
   top: 0;
   left: 10vw;
   box-shadow: 0px 0px 10px #4705fc33;
@@ -297,6 +297,7 @@ div#trait{
     margin: 10px;
     transition: 400ms;
     background-color: white;
+
   }
   #pf img:hover{
     box-shadow: 0px 0px 10px #4705fc33;
@@ -337,7 +338,9 @@ div#trait{
     left: auto;
  
     
-  }}
+  }
+  .motion_img{display: none;}
+}
   @media screen and (min-width:1000px){
   #pf{
   margin-left: 10vw;
@@ -357,7 +360,7 @@ div#trait{
     cursor: pointer;
     margin: 10px;
     transition: 400ms;
-    filter:grayscale(1);
+    filter:grayscale(1) brightness(0.7);
     background-color: white;
   }
   #pf img:hover{
@@ -399,9 +402,40 @@ div#trait{
     right: 0;
     
   }
+  #motioncontainer{
+   position: relative;
+  }
+  .motion_img{
+  position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .motion_img:hover{
+    display: none;
+  }
+  .motion{
+    position: relative;
+    opacity: 0%;
+  }
+  .motion:hover{
+    opacity: 1;
+  }
 }
+
     </style>
+    
       <section id="pf">
+        <a href="#mot_1">
+          <!-- <video width="320" height="240" controls>
+            <source src="../assets/vids/mot_1.mp4" type="video/mp4">
+      
+        
+          </video>  -->
+          <div id="motioncontainer">
+                <img src="../assets/img/img_mot.png" class="motion_img" alt="motion_img">
+                <img src="../assets/vids/mot_1.gif" alt="motion" class="motion">
+           </div>
+        </a>
         <a href="#isis">
           <img src="../assets/img/chartegraphique.png" alt="logo jardin d'isis">
         </a>
@@ -423,6 +457,7 @@ div#trait{
         <a href="#aibroad">
           <img src="../assets/img/AIBROAD_1@150x.png" alt="aibroad">
         </a>
+       
       
         
       </section> 
@@ -492,6 +527,8 @@ div#trait{
         }}
 
       </style>
+
+      
       <section>
       <div id="isis" class="overlay">
         <div class="popup row">
@@ -583,7 +620,7 @@ div#trait{
         <div class="popup row">
           <div class="column">
 
-            <img src="../assets/img/teamo.png" alt="projet de site de permaculture">
+            <img src="../assets/img/teamo.png" alt="projet de site de bubbletea">
           </div>
           <div class="column">
             <a href="#pf" class="cross">&times;</a>
@@ -611,6 +648,23 @@ div#trait{
           </div>
         </div>
       </div>
+
+      <div id="mot_1" class="overlay">
+        <div class="popup row">
+          <div class="column">
+
+            <img src="../assets/vids/mot_1.gif" alt="mot_1">
+          </div>
+          <div class="column">
+            <a href="#pf" class="cross">&times;</a>
+            <h2 class="project-title">Motion</h2>
+            <h3 class="project-sub-title">Exercice d'entrainement au motion</h3>
+            <p class="project-desc">Réalisation d'une courte animation sur after effects bouclant sur elle-même</p>
+          </div>
+        </div>
+      </div>
+
+
     </section>
       
         
