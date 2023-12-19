@@ -119,7 +119,14 @@ display: flex;
 justify-content: center;
 align-items: center;
   text-decoration: none;
-  transition: all O.3s;
+  transition: all 0.3s;
+
+}
+main a#CTA:hover{
+  background-color: black;
+ 
+  border-radius: 10px;
+
 }
 
 
@@ -341,6 +348,12 @@ section#about .btn{
   letter-spacing: -1px;
   justify-content: center;
   align-items: center;
+}
+section#about .btn:hover{
+  background-color: var(--body-bg);
+  transition:0.3s ease-in-out;
+  color: var(--violet2);
+  border: solid 2px;
 }
 section#about .btn1{
   font-family: 'Roboto mono';
@@ -943,6 +956,11 @@ section#accueil .sub{
             text-decoration: none;
           
           }
+#ici:hover{
+background-color: black;
+transition: 0.3s;
+border-radius: 10px;
+}
 
 
 @media (max-width: 1000px) {
