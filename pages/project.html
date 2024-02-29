@@ -64,7 +64,7 @@ html{
 div#trait{
   position: absolute;
   border-left: 2px solid black;
-  min-height:250vh;
+  min-height:200vh;
   top: 0;
   left: 10vw;
   box-shadow: 0px 0px 10px #4705fc33;
@@ -324,7 +324,7 @@ div#trait{
     padding: 2rem;
     background: #fff;
     border-radius: 13px;
-    width: 80%;
+    width: 100%;
     max-width: 1200px;
     height: auto;
     position: relative;
@@ -335,11 +335,17 @@ div#trait{
     font-size: 4rem;
     position: absolute;
     bottom: 0;
-    left: auto;
+    left: 0;
  
     
   }
   .motion_img{display: none;}
+  .realdetails-details-separator
+  {
+  margin-right: auto;
+    margin-left: auto;
+  width: 70%!important;
+}
 }
   @media screen and (min-width:1000px){
   #pf{
@@ -368,6 +374,7 @@ div#trait{
     filter:grayscale(0);
     transform: scale(1.03);
   }
+  
   .overlay{
     position:fixed;
     top: 0;
@@ -385,21 +392,21 @@ div#trait{
   }
   .popup{
     margin: 6rem auto;
-    padding: 2rem;
+    padding: 2rem 4%;
     background: #fff;
     border-radius: 13px;
-    width: 1000px;
-    max-width: 1200px;
-    height: 500px;
+    width:80%;
+    height: 80%;
     position: relative;
     transition: all .4s;
+    overflow: hidden;
   }
   a.cross{
     text-decoration: none;
-    font-size: 8rem;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    font-size: 4rem;
+    position: fixed;
+    top: 10%;
+    left: 85.5%;
     
   }
   #motioncontainer{
@@ -436,12 +443,12 @@ div#trait{
                 <img src="../assets/vids/mot_1.gif" alt="motion" class="motion">
            </div>
         </a>
-        <a href="#isis">
-          <img src="../assets/img/chartegraphique.png" alt="logo jardin d'isis">
+        <a href="#cafe">
+          <img src="../assets/img/cafe.png" alt="cafe 3D blender'">
         </a>
-        <a href="#design">
+      <!---  <a href="#design">
           <img src="../assets/img/design.png" alt="maquette html css accueil de site">
-        </a>
+        </a>-->
         <a href="#offline">
           <img src="../assets/img/offlinemag.png" alt="offline marque de streetwear">
         </a>
@@ -466,10 +473,10 @@ div#trait{
         @media screen and (max-width:1000px){
           .column>img{
           width: auto;
-          max-width: 300px;
-          height: 80%;
+          max-width: 100%;
           box-shadow: 0px 20px 20px #4705fc33;
-          max-height: 300px;}
+          border-radius: 12px;
+          margin-bottom: 10px;}
           
 
         
@@ -478,81 +485,204 @@ div#trait{
             text-transform: uppercase;
             font-weight: 900;
             color: black;
-            font-size: 2.5rem;
+            font-size: 1.5rem;
           }
           .project-sub-title {
-            font-size: 1.6rem;
+            font-size: 0.8rem;
             margin-bottom: 2rem;
+            line-height: 1.4;
+    font-weight: 600;
           }
           .project-desc {
           color: var(--secondary-gray);
           margin-bottom: 3rem;
           font-size: 1.2rem;
-          }}
+          }
+          .realdetails{
+          display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+        }
+        .realdetails-title{
+          color: var(--violet2);
+          font-size: 1.6rem;
+          font-weight: 900;
+          text-align: left;
+          line-height: 107%;
+        }
+        .details-wrapper{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          gap: 1rem;
+          width: 450px;
+        }
+        .realdetails-details-item{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 4rem;
+          width: 100%;
+        }
+        .realdetails-details-item-type{
+          font-size: 1.2rem;
+          font-weight: 600;
+          color: var(--violet2);
+        }
+        .realdetails-details-item-content{
+          font-size: 1.2rem;
+          font-weight: 600;
+          color: var(--violetneon);
+          opacity: 0.8;
+          text-align: right;
+          max-width: 20ch;
+        }
+        .realdetails-details-separator
+          {
+            width: 100%;
+            height: 1px;
+            background-color: black;
+            opacity: 0.2;
+          }
+        .project-title>img{
+          height: 50px;
+          width: auto;
+        }}
         @media screen and (min-width:1000px){
           
         .row{
           display: flex;
-          height: fit-content
-          ;
-        }
-        .column{flex:50%; 
-        padding: 10px;      
+          overflow-y: auto;
         }
         .project-title{
-          background-color: var(--body-bg);
-          margin-left: -3%;
-          margin-top: 2.5%;
           padding: 1rem 0;
           text-transform: uppercase;
-          font-weight: 900;
-          text-align: center;
+          font-weight: 900;   
           color: black;
           font-size: 2.5rem;
         }
         .project-sub-title{
-          text-align: center;
           font-size: 1.6rem;
         margin-bottom: 2rem;
+        font-weight: 600;
         }
         .project-desc {
           color: var(--secondary-gray);
           font-size: 1.2rem;
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          gap: 4rem;
         }
         .column>img{
-          width: 400px;
-          height: auto;
-          box-shadow: 0px 20px 20px #4705fc33;
-          
-        }}
+          width: 80%;
+    height: auto;
+    border-radius: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    box-shadow: 0px 20px 20px #4705fc33;
+        }
+        .realdetails{
+          display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+        }
+        .realdetails-title{
+          color: var(--violet2);
+          font-size: 1.6rem;
+          font-weight: 900;
+          text-align: left;
+          line-height: 107%;
+        }
+        .details-wrapper{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          gap: 1rem;
+          width: 450px;
+        }
+        .realdetails-details-item{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1rem;
+          width: 100%;
+        }
+        .realdetails-details-item-type{
+          font-size: 1.2rem;
+          font-weight: 600;
+          color: var(--violet2);
+        }
+        .realdetails-details-item-content{
+          font-size: 1.2rem;
+          font-weight: 600;
+          color: var(--violetneon);
+          opacity: 0.8;
+          text-align: right;
+          max-width: 20ch;
+        }
+        .realdetails-details-separator
+          {
+            width: 100%;
+            height: 1px;
+            background-color: black;
+            opacity: 0.2;
+          }
+      }
 
       </style>
 
       
       <section>
-      <div id="isis" class="overlay">
+      <div id="cafe" class="overlay">
+        
         <div class="popup row">
+          <a href="#pf" class="cross">&times;</a>
           <div class="column">
+          
+            <h2 class="project-title"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Hot%20Beverage.png" alt="Hot Beverage" width="125" height="125" /> Café.</h2>
+            <h3 class="project-sub-title">Le projet Café est une réalistion de modélisation 3D à l'aide du logiciel Blender(v4.0). L'objective principal était de concevoir 
+              un batiment dans un style minimaliste cosy. 
+            </h3>
+            <div class="column">
 
-            <img src="../assets/img/chartegraphique.png" alt="logo jardin d'isis">
-          </div>
-          <div class="column">
-            <a href="#pf" class="cross">&times;</a>
-            <h2 class="project-title"> ébauche de logo</h2>
-            <h3 class="project-sub-title">Exercice d'imagination et de créativité</h3>
-            <p class="project-desc">Lors d'un devoir j'ai pu 
-              essayer d'imaginer la base 
-              d'un nouveau logo pour "Les jardins d'Isis" </p>
+              <img src="../assets/img/cafe.png" alt="cafe blender">
+            </div>
+              <div class="realdetails">
+                <h2 class="realdetails-title">Détail du Projet</h2>
+                <div class="details-wrapper">
+                  <div class="realdetails-details-item">
+                    <p class="realdetails-details-item-type">Services</p>
+                    <p class="realdetails-details-item-content">Conception 3D</p>
+                  </div>
+                  <span class="realdetails-details-separator"></span>
+                  <div class="realdetails-details-item">
+                    <p class="realdetails-details-item-type">date</p>
+                    <p class="realdetails-details-item-content">Janvier 2024</p>
+                  </div>
+
+              </div>
+                </div>
           </div>
 
         </div>
-      </div>
 
-      <div id="design" class="overlay">
+      </div>
+    </div>
+
+      <!--<div id="design" class="overlay">
         <div class="popup row">
           <div class="column">
-
-            <img src="../assets/img/design.png" alt="maquette html css accueil de site">
+          -->
+            <!--<img src="../assets/img/design.png" alt="maquette html css accueil de site">
           </div>
           <div class="column">
             <a href="#pf" class="cross">&times;</a>
@@ -563,13 +693,15 @@ div#trait{
           </div>
 
         </div>
-      </div>
+      </div>-->
+       
 
       <div id="offline" class="overlay">
         <div class="popup row">
+          <a href="#pf" class="cross">&times;</a>
           <div class="column">
 
-            <img src="../assets/img/offlinemag.png" alt="offline marque geek fictive">
+      <!--      <img src="../assets/img/offlinemag.png" alt="offline marque geek fictive">
           </div>
           <div class="column">
             <a href="#pf" class="cross">&times;</a>
@@ -580,31 +712,77 @@ div#trait{
           </div>
 
         </div>
+      </div>-->
+      <h2 class="project-title"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Coat.png" alt="Coat" width="125" height="125" /> Offline</h2>
+          <h3 class="project-sub-title">Projet sur la création d'une premiere de couverture sur InDesign, ainsi que d'un logo sur Illustrator, pour une marque de streeetwear.
+          </h3>
+          <div class="column">
+            <img src="../assets/img/offlinecomplet.svg" alt="Offline marque de vetements">
+                </div>
+                  <div class="realdetails">
+                    <h2 class="realdetails-title">Détail du Projet</h2>
+                    <div class="details-wrapper">
+                      <div class="realdetails-details-item">
+                        <p class="realdetails-details-item-type">Services</p>
+                        <p class="realdetails-details-item-content">Branding</p>
+                      </div>
+                      <span class="realdetails-details-separator"></span>
+                      <div class="realdetails-details-item">
+                        <p class="realdetails-details-item-type">date</p>
+                        <p class="realdetails-details-item-content">Novembre 2023</p>
+                      </div>
+
+            </div>
+              </div>
+        </div>
+
       </div>
 
-      <div id="epcm" class="overlay">
-        <div class="popup row">
-          <div class="column">
+    </div>
+  </div>
 
-            <img src="../assets/img/portfolio-bacquetlaure.png" alt="Portfolio pour une chanteuse danseuse bacquet laure">
-          </div>
+      <div id="epcm" class="overlay">
+        
+        <div class="popup row">
+          <a href="#pf" class="cross">&times;</a>
           <div class="column">
-            <a href="#pf" class="cross">&times;</a>
-            <h2 class="project-title">Maquette de portfolio</h2>
-            <h3 class="project-sub-title">Une maquette pour une artiste.</h3>
-            <p class="project-desc">C'est une maquette figma d'une page d'accueil pour un projet portfolio d
-              'une élève de l'Ecole Professionelle de Comédie Musciale (EPCM), à Paris.
- </p>
+          
+            <h2 class="project-title"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Woman%20Dancing%20Light%20Skin%20Tone.png" alt="Woman Dancing Light Skin Tone" width="125" height="125" /> Portfolio</h2>
+            <h3 class="project-sub-title">Ce projet est une maquette de portfolio pour une élève en fin d'étude, à l'Ecole Professionnelle de Comédie Musicale, à Paris. 
+            </h3>
+            <div class="column">
+
+              <img src="../assets/img/portfolio-bacquetlaure.png" alt="portfolio de Laure Bacquet">
+            </div>
+              <div class="realdetails">
+                <h2 class="realdetails-title">Détail du Projet</h2>
+                <div class="details-wrapper">
+                  <div class="realdetails-details-item">
+                    <p class="realdetails-details-item-type">Services</p>
+                    <p class="realdetails-details-item-content">Maquette</p>
+                  </div>
+                  <span class="realdetails-details-separator"></span>
+                  <div class="realdetails-details-item">
+                    <p class="realdetails-details-item-type">date</p>
+                    <p class="realdetails-details-item-content">Janvier 2023</p>
+                  </div>
+
+              </div>
+                </div>
           </div>
 
         </div>
+
       </div>
+    </div>
+      
 
       <div id="perma" class="overlay">
         <div class="popup row">
+          <a href="#pf" class="cross">&times;</a>
           <div class="column">
 
-            <img src="../assets/img/PERMACULTURE.png" alt="projet de site de permaculture">
+           <!-- <img src="../assets/img/PERMACULTURE.png" alt="projet de site de permaculture">
           </div>
           <div class="column">
             <a href="#pf" class="cross">&times;</a>
@@ -615,45 +793,112 @@ div#trait{
           </div>
 
         </div>
+      </div>-->
+      <h2 class="project-title"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Wood.png" alt="Wood" width="125" height="125" /> Permaculture</h2>
+          <h3 class="project-sub-title">Ce projet a pour but d'inicier à la permaculture par un site internet crée avec Wordpress. Des vidéos et comptes sur les réseaux ont égalements été créés.
+          </h3>
+          <div class="column">
+
+            <img src="../assets/img/PERMACULTURE.png" alt="projet de site de permaculture">
+          </div>
+            <div class="realdetails">
+              <h2 class="realdetails-title">Détail du Projet</h2>
+              <div class="details-wrapper">
+                <div class="realdetails-details-item">
+                  <p class="realdetails-details-item-type">Services</p>
+                  <p class="realdetails-details-item-content">Communication</p>
+                </div>
+                <span class="realdetails-details-separator"></span>
+                <div class="realdetails-details-item">
+                  <p class="realdetails-details-item-type">date</p>
+                  <p class="realdetails-details-item-content">Mars 2022</p>
+                </div>
+
+            </div>
+              </div>
+        </div>
+
       </div>
+
+    </div>
+  </div>
       <div id="teamo" class="overlay">
+        
         <div class="popup row">
+          <a href="#pf" class="cross">&times;</a>
           <div class="column">
+          
+            <h2 class="project-title"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Bubble%20Tea.png" alt="Bubble Tea" width="125" height="125" /> Teamo</h2>
+            <h3 class="project-sub-title">Le projet Teamo est une marque fictive de Bubbletea inspiré par la mascotte du même nom "Teemo" issue du jeu League Of Legends. Voici l'accueil de son site vitrine, réalisé sur Wordpress.
+            </h3>
+            <div class="column">
 
-            <img src="../assets/img/teamo.png" alt="projet de site de bubbletea">
-          </div>
-          <div class="column">
-            <a href="#pf" class="cross">&times;</a>
-            <h2 class="project-title"> Marque de bubbletea</h2>
-            <h3 class="project-sub-title">Exercice de créativité</h3>
-            <p class="project-desc">création d'une marque fictive de bubbletea inspiré par une 
-              mascotte du jeu League of Legends "Teemo" ainsi qu'une page wordpress </p>
+              <img src="../assets/img/teamo.png" alt="maquette wordpress teamo">
+            </div>
+              <div class="realdetails">
+                <h2 class="realdetails-title">Détail du Projet</h2>
+                <div class="details-wrapper">
+                  <div class="realdetails-details-item">
+                    <p class="realdetails-details-item-type">Services</p>
+                    <p class="realdetails-details-item-content">Site web - Branding</p>
+                  </div>
+                  <span class="realdetails-details-separator"></span>
+                  <div class="realdetails-details-item">
+                    <p class="realdetails-details-item-type">date</p>
+                    <p class="realdetails-details-item-content">Decembre 2022</p>
+                  </div>
+
+              </div>
+                </div>
           </div>
 
         </div>
+
       </div>
+    </div>
 
-      <div id="aibroad" class="overlay">
-        <div class="popup row">
+    <div id="aibroad" class="overlay">
+        
+      <div class="popup row">
+        <a href="#pf" class="cross">&times;</a>
+        <div class="column">
+        
+          <h2 class="project-title"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Airplane.png" alt="Airplane" width="125" height="125" /> Aibroad</h2>
+          <h3 class="project-sub-title">Le projet aiBroad est une réalisation de marque de voyage se servant de l'IA afin de satisfaire ses clients pour leurs voyages.
+          </h3>
           <div class="column">
 
-            <img src="../assets/img/AIBROAD.svg" alt="aibroad">
+            <img src="../assets/img/AIBROAD.png" alt="Marque de voyage utilisant technologie IA">
           </div>
-          <div class="column">
-            <a href="#pf" class="cross">&times;</a>
-            <h2 class="project-title">Création de marque</h2>
-            <h3 class="project-sub-title">Exercice de créativité avec contraintes</h3>
-            <p class="project-desc">Réalisation d'une marque de voyage se servant d'algorithmes et d'IA
-              afin de satisfaire ses clients pour leurs voyage. Conception d'un brief créatif  </p>
-          </div>
+            <div class="realdetails">
+              <h2 class="realdetails-title">Détail du Projet</h2>
+              <div class="details-wrapper">
+                <div class="realdetails-details-item">
+                  <p class="realdetails-details-item-type">Services</p>
+                  <p class="realdetails-details-item-content">Branding</p>
+                </div>
+                <span class="realdetails-details-separator"></span>
+                <div class="realdetails-details-item">
+                  <p class="realdetails-details-item-type">date</p>
+                  <p class="realdetails-details-item-content">Mars 2023</p>
+                </div>
+
+            </div>
+              </div>
         </div>
+
       </div>
+
+    </div>
+  </div>
 
       <div id="mot_1" class="overlay">
+
         <div class="popup row">
+          <a href="#pf" class="cross">&times;</a>
           <div class="column">
 
-            <img src="../assets/vids/mot_1.gif" alt="mot_1">
+           <!-- <img src="../assets/vids/mot_1.gif" alt="mot_1">
           </div>
           <div class="column">
             <a href="#pf" class="cross">&times;</a>
@@ -662,7 +907,35 @@ div#trait{
             <p class="project-desc">Réalisation d'une courte animation sur after effects bouclant sur elle-même</p>
           </div>
         </div>
+      </div> -->
+      <h2 class="project-title"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Milky%20Way.png" alt="Milky Way" width="125" height="125" /> Motion ;)</h2>
+          <h3 class="project-sub-title">Ce projet est une vidéo motion bouclant sur elle-même. Réalisé sur Adobe After Effects. 
+          </h3>
+          <div class="column">
+
+            <img src="../assets/vids/mot_1.gif" alt="mot_1">
+          </div>
+            <div class="realdetails">
+              <h2 class="realdetails-title">Détail du Projet</h2>
+              <div class="details-wrapper">
+                <div class="realdetails-details-item">
+                  <p class="realdetails-details-item-type">Services</p>
+                  <p class="realdetails-details-item-content">Motion </p>
+                </div>
+                <span class="realdetails-details-separator"></span>
+                <div class="realdetails-details-item">
+                  <p class="realdetails-details-item-type">date</p>
+                  <p class="realdetails-details-item-content">Septembre 2024</p>
+                </div>
+
+            </div>
+              </div>
+        </div>
+
       </div>
+
+    </div>
+  </div>
 
 
     </section>
@@ -677,7 +950,9 @@ div#trait{
     <p>Je suis là pour vous ! Envoyez-moi un
       <a class="link" href="mailto:brandon.tsoa@gmail.com" rel="noopener">mail</a> 
       ou <a class="link" href="tel:+33766463810" rel="noopener">appelez-moi</a>. </p>
-      <p style="color: white;"> <i class="fa fa-map-marker" aria-hidden="true"></i> 236 rue de bordeaux, 16000 Angoulême <br> <i class="fa fa-phone" aria-hidden="true"></i> +33 7 66 46 38 10 <br> <i class="fa fa-envelope" aria-hidden="true"></i> brandon.tsoa@gmail.com</p>
+      <p style="color: white;"> 
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Round%20Pushpin.png" alt="Round Pushpin" width="25" height="25" /> 236 rue de bordeaux, 16000 Angoulême <br>
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Telephone%20Receiver.png" alt="Telephone Receiver" width="25" height="25" /> +33 7 66 46 38 10 <br> <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Envelope%20with%20Arrow.png" alt="Envelope with Arrow" width="25" height="25" /> brandon.tsoa@gmail.com</p>
 
       <p class="copyright">@ 2022 | &copy; Copyright <strong><span>Brandon Ravelontsoa</span></strong>. Tous droits réservés | <a href="mentions_légales.html"> Mentions légales</a> | <a href="confidentialité.html">Politique de confidentialité</a>
       </p>
